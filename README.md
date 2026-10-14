@@ -13,7 +13,7 @@ This project compares the price of the same shopping basket at the six largest D
 
 ## 🧪 What the script does
 - Downloads the 48 monthly price snapshots
-- Cleans the data: keeps the six chains, converts pack sizes, removes wrong matches
+- Cleans the data: keeps the six chains, converts pack sizes to standard sizes, removes wrong or empty matches
 - Finds the cheapest match for each of 30 basket products per chain and month
 - Compares each chain with the average and ranks the chains per month
 - Visualizes:
@@ -24,15 +24,15 @@ This project compares the price of the same shopping basket at the six largest D
 The script generates:
 - `figures/plot1_basket_over_time.png`
 - `figures/plot2_ranking.png`
-- `results/*.csv` (all numbers behind the plots)
+- `results/*.csv` 
 
 ## ▶️ How to run
 Install R and the two required packages once:
 ```r
 install.packages(c("jsonlite", "ggplot2"))
 ```
-Then run from the project folder:
+run from the project folder:
 ```bash
 Rscript supermarket_analysis.R
 ```
-The first run needs an internet connection to download the data (~500 MB) and takes a few minutes.
+The first run needs an internet connection to download the data (~500 MB) which takes a few minutes.
